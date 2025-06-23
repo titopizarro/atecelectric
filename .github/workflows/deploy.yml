@@ -30,6 +30,9 @@ jobs:
       - name: Set PUBLIC_BASE_PATH for GitHub Pages
         run: echo "NEXT_PUBLIC_BASE_PATH=/atecelectric" >> .env.production
 
+      - name: Print .env.production (debug)
+        run: cat .env.production
+
       - name: Install dependencies 🔧
         run: npm ci
 
