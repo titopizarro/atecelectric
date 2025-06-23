@@ -2,7 +2,7 @@
 const nextConfig = {
   output: "export", // Habilita la exportación estática
   basePath: "/atecelectric",
-  assetPrefix: "./",
+  assetPrefix: "/atecelectric/",
 };
 
 export default nextConfig;
