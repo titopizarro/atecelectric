@@ -1,7 +1,11 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   output: "export", // Habilita la exportación estática
-  trailingSlash: true, // Necesario para GitHub Pages
+  trailingSlash: true, // Mejor para GitHub Pages
+  basePath: "/atecelectric", // Ajusta si tu repo cambia de nombre
+  images: {
+    unoptimized: true, // Hace que next/image funcione en export
+  },
 };
 
 export default nextConfig;
