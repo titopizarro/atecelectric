@@ -2,6 +2,7 @@
 
 import Container from "./Container";
 import Image from "next/image";
+import { getImagePath } from "@/app/utils/getImagePath";
 
 export default function AboutSection() {
   return (
@@ -21,7 +22,7 @@ export default function AboutSection() {
           </div>
           <div className="flex-1 flex justify-center">
             <Image
-              src="/atecelectric_logo.png"
+              src={getImagePath("/atecelectric_logo.png")}
               alt="Equipo Atec Electric"
               width={420}
               height={320}

@@ -1,5 +1,6 @@
 "use client";
 import Image from "next/image";
+import { getImagePath } from "@/app/utils/getImagePath";
 
 const porfolioImages = [
   {
@@ -112,7 +113,7 @@ const PorfolioSection = () => {
             >
               <div className="relative aspect-[4/3] w-full">
                 <Image
-                  src={image.image}
+                  src={getImagePath(image.image)}
                   alt={image.alt}
                   fill
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"

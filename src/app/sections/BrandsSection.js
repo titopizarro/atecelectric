@@ -4,6 +4,7 @@ import Container from "./Container";
 import Image from "next/image";
 // import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
+import { getImagePath } from "@/app/utils/getImagePath";
 
 const brands = [
   {
@@ -151,7 +152,7 @@ const BrandCard = ({ brand }) => {
       className="relative w-32 h-32 flex-shrink-0 transition-all duration-300 p-4"
     >
       <Image
-        src={brand.image}
+        src={getImagePath(brand.image)}
         alt={brand.alt}
         fill
         className="object-contain"

@@ -6,6 +6,9 @@ const nextConfig = {
   images: {
     unoptimized: true, // Hace que next/image funcione en export
   },
+  env: {
+    NEXT_PUBLIC_BASE_PATH: "/atecelectric",
+  },
 };
 
 export default nextConfig;

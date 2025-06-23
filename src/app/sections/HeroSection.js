@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import Container from "./Container";
+import { getImagePath } from "@/app/utils/getImagePath";
 
 export default function HeroSection() {
   return (
@@ -11,7 +12,7 @@ export default function HeroSection() {
         <section className="relative flex flex-col md:flex-row items-center justify-between text-white overflow-hidden gap-12">
           <div className="flex-1 flex flex-col items-start justify-center z-10">
             <Image
-              src="/logo_2.webp"
+              src={getImagePath("/logo_2.webp")}
               alt="Atec Electric"
               width={300}
               height={140}
@@ -33,7 +34,7 @@ export default function HeroSection() {
           </div>
           <div className="hidden md:flex flex-1 w-full justify-center mt-12 md:mt-0">
             <Image
-              src="/undraw_electricity_iu6d.svg"
+              src={getImagePath("/undraw_electricity_iu6d.svg")}
               alt="Atec Electric"
               width={500}
               height={500}
