@@ -8,12 +8,12 @@ if (DEPLOY_TO === "github") {
   nextConfig = {
     output: "export", // Habilita la exportación estática
     trailingSlash: true, // Mejor para GitHub Pages
-    basePath: `/${BASE_PATH}`, // Ajusta si tu repo cambia de nombre
+    basePath: `${BASE_PATH}`, // Ajusta si tu repo cambia de nombre
     images: {
       unoptimized: true, // Hace que next/image funcione en export
     },
     env: {
-      NEXT_PUBLIC_BASE_PATH: `/${BASE_PATH}`,
+      NEXT_PUBLIC_BASE_PATH: `${BASE_PATH}`,
     },
   };
 } else {
