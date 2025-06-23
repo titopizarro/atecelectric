@@ -1,8 +1,7 @@
-// import { usePathname } from "next/navigation";
-// import { useRouter } from "next/router";
+import { BASE_PATH } from "../constants";
 
 export function getImagePath(src) {
-  const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
-  if (src.startsWith(basePath)) return src;
-  return `${basePath}${src}`;
+  if (src.startsWith(BASE_PATH)) return src;
+
+  return `${BASE_PATH}${src}`;
 }

@@ -27,8 +27,10 @@ jobs:
           node-version: "20"
           cache: "npm"
 
-      - name: Set PUBLIC_BASE_PATH for GitHub Pages
-        run: echo "NEXT_PUBLIC_BASE_PATH=/atecelectric" >> .env.production
+      - name: Set environment variables for GitHub Pages
+        run: |
+          echo "DEPLOY_TO=github" >> .env.production
+          echo "NEXT_PUBLIC_BASE_PATH=/atecelectric" >> .env.production
 
       - name: Print .env.production (debug)
         run: cat .env.production
