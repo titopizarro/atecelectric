@@ -1,8 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   output: "export", // Habilita la exportación estática
-  basePath: "/atecelectric",
-  assetPrefix: "/atecelectric/", // Compatible con next/font
+  trailingSlash: true, // Necesario para GitHub Pages
 };
 
 export default nextConfig;
